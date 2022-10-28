@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+$ProductController = new ProductController();
 
-Route::get('/', function () {
-    return view('tienda');
+Route::get('/', function (Request $request) use ($ProductController){
+    return $ProductController->index($request);
 });
 

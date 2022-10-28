@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.display ~ tr{
+    display: none !important;
+}
+
+table {
+    transition: all 0.4s ease-out;
+}
+.transition {
+    opacity: 0;
+
+}
